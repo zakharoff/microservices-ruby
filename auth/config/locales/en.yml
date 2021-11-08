@@ -1,0 +1,10 @@
+en:
+  validation:
+    errors:
+      must_be_filled: 'Field must be filled'
+
+  api:
+    errors:
+      not_found: 'Resource not found'
+      not_unique: 'Resource has already been created'
+      missing_parameters: 'Request does not contain the necessary parameters'
