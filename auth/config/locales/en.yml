@@ -3,8 +3,19 @@ en:
     errors:
       must_be_filled: 'Field must be filled'
 
+      name:
+        format: 'Use only letters, numbers and underscore symbol'
+
   api:
     errors:
       not_found: 'Resource not found'
       not_unique: 'Resource has already been created'
       missing_parameters: 'Request does not contain the necessary parameters'
+
+  services:
+    user_sessions:
+      create_service:
+        unauthorized: 'Session does not create'
+    auth:
+      fetch_user_service:
+        forbidden: 'Access denied'

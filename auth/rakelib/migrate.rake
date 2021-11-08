@@ -9,6 +9,12 @@ namespace :db do
       version = args.version.to_i if args.version
 
       Sequel::Migrator.run(db, migrations, target: version)
+
+      db.extension :schema_dumper
+
+      File.open('db/schema.rb', 'w') do |file|
+        file << db.dump_schema_migration(same_db: true, indexes: true, foreign_keys: true)
+      end
     end
   end
 end
