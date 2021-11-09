@@ -25,6 +25,8 @@ gem 'dry-validation'
 
 gem 'fast_jsonapi'
 
+gem 'jwt'
+
 group :development do
   gem 'byebug'
 end

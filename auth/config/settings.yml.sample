@@ -3,3 +3,6 @@ db:
   host: localhost
   user: postgres
   password: postgres
+
+app:
+  secret: secret
