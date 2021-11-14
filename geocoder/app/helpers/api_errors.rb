@@ -5,7 +5,7 @@ module ApiErrors
 
   helpers do
     def error_response(error_message)
-      json ErrorSerializer.from_messages(error_messages)
+      json ErrorSerializer.from_messages(error_message)
     end
   end
 

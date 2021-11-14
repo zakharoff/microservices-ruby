@@ -3,6 +3,7 @@ module ApplicationLoader
 
   def load_app!
     init_config
+    init_data
     require_app
     init_app
   end
@@ -11,6 +12,10 @@ module ApplicationLoader
 
   def init_config
     require_file 'config/initializers/config'
+  end
+
+  def init_data
+    require_file 'lib/dictionary'
   end
 
   def require_app

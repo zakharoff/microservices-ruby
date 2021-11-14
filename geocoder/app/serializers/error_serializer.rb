@@ -15,7 +15,7 @@ module ErrorSerializer
 
   def build_error(message, meta = {})
     error = { detail: message }
-    error[:meta] = meta if meta.present?
+    error[:meta] = meta if meta.any?
     error
   end
 end
