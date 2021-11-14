@@ -6,7 +6,7 @@ class GeocoderRoutes < Application
       result = Geocoder::FindCodeService.call(geocoder_params[:geocoder][:city])
 
       if result.success?
-        status 201
+        status 200
         json data: result.code
       else
         status 422
