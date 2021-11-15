@@ -1,0 +1,6 @@
+db:
+  adapter: postgresql
+  host: localhost
+
+app:
+  secret: my_secret
