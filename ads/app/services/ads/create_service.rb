@@ -9,12 +9,18 @@ module Ads
     end
 
     option :user_id
+    option :geocode
 
     attr_reader :ad
 
     def call
       @ad = ::Ad.new(@ad.to_h)
       @ad.user_id = @user_id
+
+      if @geocode.present?
+        @ad.lat = @geocode['lat']
+        @ad.lon = @geocode['lon']
+      end
 
       if @ad.valid?
         @ad.save

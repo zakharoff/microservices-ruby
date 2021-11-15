@@ -18,12 +18,22 @@ RSpec.describe AdRoutes, type: :routes do
     let(:user_id) { 101 }
     let(:auth_token) { 'auth.token' }
     let(:auth_service) { instance_double('Auth service') }
+    let(:geocoder_service) { instance_double('Geocoder service') }
+    let(:geocode) {
+      {
+        'lat' => 55.7540471,
+        'lon' => 37.620405
+      }
+    }
 
     before do
       allow(auth_service).to receive(:auth).and_return(user_id)
       allow(AuthService::Client).to receive(:new).and_return(auth_service)
 
       header 'Authorization', "Bearer #{auth_token}"
+
+      allow(geocoder_service).to receive(:geocode).and_return(geocode)
+      allow(GeocoderService::Client).to receive(:new).and_return(geocoder_service)
     end
 
     context 'missing parameters' do
