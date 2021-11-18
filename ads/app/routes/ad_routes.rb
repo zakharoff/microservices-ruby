@@ -16,8 +16,7 @@ class AdRoutes < Application
 
       result = Ads::CreateService.call(
         ad: ad_params[:ad],
-        user_id: user_id,
-        geocode: latitude_longitude(ad_params[:ad][:city])
+        user_id: user_id
       )
 
       result =
