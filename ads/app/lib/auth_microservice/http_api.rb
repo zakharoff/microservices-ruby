@@ -1,5 +1,5 @@
 module AuthService
-  module Api
+  module HttpApi
     def auth(token)
       response = connection.post('auth') do |request|
         request.headers['Authorization'] = "Bearer #{token}"

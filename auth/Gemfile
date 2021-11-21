@@ -15,6 +15,8 @@ gem 'sinatra-contrib'
 gem 'i18n'
 gem 'config'
 
+gem 'bunny'
+
 gem 'pg'
 gem 'sequel'
 gem 'sequel-seed'
