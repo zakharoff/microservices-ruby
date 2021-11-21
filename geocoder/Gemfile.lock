@@ -53,9 +53,31 @@ GEM
       dry-schema (~> 1.8, >= 1.8.0)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
+    faraday (1.8.0)
+      faraday-em_http (~> 1.0)
+      faraday-em_synchrony (~> 1.0)
+      faraday-excon (~> 1.1)
+      faraday-httpclient (~> 1.0.1)
+      faraday-net_http (~> 1.0)
+      faraday-net_http_persistent (~> 1.1)
+      faraday-patron (~> 1.0)
+      faraday-rack (~> 1.0)
+      multipart-post (>= 1.2, < 3)
+      ruby2_keywords (>= 0.0.4)
+    faraday-em_http (1.0.0)
+    faraday-em_synchrony (1.0.0)
+    faraday-excon (1.1.0)
+    faraday-httpclient (1.0.1)
+    faraday-net_http (1.0.1)
+    faraday-net_http_persistent (1.2.0)
+    faraday-patron (1.0.0)
+    faraday-rack (1.0.0)
+    faraday_middleware (1.2.0)
+      faraday (~> 1.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     minitest (5.14.4)
+    multipart-post (2.1.1)
     rake (13.0.6)
     rbtree (0.4.4)
     rspec (3.10.0)
@@ -71,6 +93,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
+    ruby2_keywords (0.0.5)
     set (1.0.2)
     sorted_set (1.0.3)
       rbtree
@@ -90,6 +113,8 @@ DEPENDENCIES
   dry-initializer
   dry-validation
   factory_bot
+  faraday
+  faraday_middleware
   i18n
   rake
   rspec

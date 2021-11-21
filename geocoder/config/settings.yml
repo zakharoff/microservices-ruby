@@ -1,2 +1,5 @@
+microservices:
+  ads_url: http://localhost:3000/ads/v1
+
 rabbitmq:
   consumer_pool: 10

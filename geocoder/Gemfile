@@ -16,6 +16,9 @@ gem 'csv'
 gem 'dry-initializer'
 gem 'dry-validation'
 
+gem 'faraday'
+gem 'faraday_middleware'
+
 group :development do
   gem 'byebug'
 end
