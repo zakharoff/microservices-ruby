@@ -7,6 +7,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    amazing_print (1.4.0)
     amq-protocol (2.3.2)
     bcrypt (3.1.16)
     bunny (2.19.0)
@@ -67,12 +68,19 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
+    oj (3.13.9)
+    ougai (1.9.1)
+      oj (~> 3.10)
     pg (1.2.3)
     puma (5.5.2)
       nio4r (~> 2.0)
     rack (2.2.3)
+    rack-ougai (0.2.1)
+      ougai (~> 1.5)
+      rack (~> 2.0)
     rack-protection (2.1.0)
       rack
+    rack-request-id (0.0.4)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rake (13.0.6)
@@ -121,6 +129,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  amazing_print
   bunny
   byebug
   config
@@ -133,6 +142,8 @@ DEPENDENCIES
   jwt
   pg
   puma
+  rack-ougai
+  rack-request-id
   rack-test
   rake
   rspec

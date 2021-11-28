@@ -8,12 +8,15 @@ ruby '3.0.2'
 
 gem 'rake'
 gem 'puma'
+gem 'rack-ougai'
+gem 'rack-request-id'
 
 gem 'sinatra', require: 'sinatra/base'
 gem 'sinatra-contrib'
 
 gem 'i18n'
 gem 'config'
+gem 'amazing_print'
 
 gem 'bunny'
 

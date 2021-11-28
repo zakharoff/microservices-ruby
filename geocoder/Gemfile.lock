@@ -7,6 +7,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    amazing_print (1.4.0)
     amq-protocol (2.3.2)
     bunny (2.19.0)
       amq-protocol (~> 2.3, >= 2.3.1)
@@ -78,6 +79,9 @@ GEM
       concurrent-ruby (~> 1.0)
     minitest (5.14.4)
     multipart-post (2.1.1)
+    oj (3.13.9)
+    ougai (1.9.1)
+      oj (~> 3.10)
     rake (13.0.6)
     rbtree (0.4.4)
     rspec (3.10.0)
@@ -106,6 +110,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  amazing_print
   bunny
   byebug
   config
@@ -116,6 +121,7 @@ DEPENDENCIES
   faraday
   faraday_middleware
   i18n
+  ougai
   rake
   rspec
 

@@ -1,8 +1,11 @@
 app:
-  name: geocoder
+  name: ads
 
-microservices:
-  ads_url: http://localhost:3000/ads/v1
+db:
+  adapter: postgresql
+  host: localhost
+  user:
+  password:
 
 rabbitmq:
   consumer_pool: 10
