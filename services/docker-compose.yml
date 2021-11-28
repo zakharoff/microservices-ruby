@@ -19,6 +19,7 @@ services:
       - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /Users/roman./Documents/my/microservices-ruby/ads/log:/var/log/ads:ro
       - /Users/roman./Documents/my/microservices-ruby/geocoder/log:/var/log/geocoder:ro
+      - /Users/roman./Documents/my/microservices-ruby/auth/log:/var/log/auth:ro
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch-oss:7.8.0
     container_name: elasticsearch

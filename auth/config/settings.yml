@@ -1,9 +1,16 @@
 db:
   adapter: postgresql
   host: localhost
+  user:
+  password:
 
 app:
   secret: my_secret
+  name: auth
 
 rabbit_mq:
   consumer_pool: 10
+
+logger:
+  path: log/app.log
+  level: info

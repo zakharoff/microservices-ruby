@@ -6,6 +6,9 @@
 
 /auth/config/settings.yml
 /auth/.byebug_history
+/auth/log/*
+!/auth/log/.keep
+
 /geocoder/.byebug_history
 /geocoder/log/*
 !/geocoder/log/.keep
