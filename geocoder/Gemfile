@@ -8,6 +8,7 @@ ruby '3.0.2'
 
 gem 'rake'
 gem 'bunny'
+gem 'ougai'
 
 gem 'i18n'
 gem 'config'

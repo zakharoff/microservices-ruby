@@ -78,6 +78,9 @@ GEM
       concurrent-ruby (~> 1.0)
     minitest (5.14.4)
     multipart-post (2.1.1)
+    oj (3.13.9)
+    ougai (1.9.1)
+      oj (~> 3.10)
     rake (13.0.6)
     rbtree (0.4.4)
     rspec (3.10.0)
@@ -116,6 +119,7 @@ DEPENDENCIES
   faraday
   faraday_middleware
   i18n
+  ougai
   rake
   rspec
 
