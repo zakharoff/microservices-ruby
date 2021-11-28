@@ -1,5 +1,9 @@
-/ads/config/settings.yml
+/ads/config/settings.local.yml
+/ads/config/settings/*.local.yml
 /ads/.byebug_history
+/ads/log/*
+!/ads/log/.keep
+
 /auth/config/settings.yml
 /auth/.byebug_history
 /geocoder/.byebug_history

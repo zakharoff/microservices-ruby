@@ -1,8 +1,0 @@
-db:
-  adapter: postgresql
-  host: localhost
-  user: postgres
-  password: postgres
-
-rabbitmq:
-  consumer_pool: 10
