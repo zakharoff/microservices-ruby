@@ -16,11 +16,8 @@ class AdRoutes < Application
 
       result = Ads::CreateService.call(
         ad: ad_params[:ad],
-        user_id: user_id,
-        geocode: latitude_longitude(ad_params[:ad][:city])
+        user_id: user_id
       )
-
-      result =
 
       if result.success?
         serializer = AdSerializer.new(result.ad)
@@ -31,6 +28,13 @@ class AdRoutes < Application
         status 422
         error_response result.ad
       end
+    end
+
+    patch do
+      lat, lon = params['coordinates']
+      result = Ads::UpdateService.call(params['id'], lat, lon)
+
+      result.success? ? status(200) : status(422)
     end
   end
 end

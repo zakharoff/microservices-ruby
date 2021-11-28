@@ -4,3 +4,6 @@ db:
 
 app:
   secret: my_secret
+
+rabbit_mq:
+  consumer_pool: 10

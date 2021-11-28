@@ -9,7 +9,7 @@ module Ads
     end
 
     option :user_id
-    option :geocode
+    option :geocode_async, default: proc { GeocoderService::Async::Client.new }
 
     attr_reader :ad
 
@@ -17,13 +17,9 @@ module Ads
       @ad = ::Ad.new(@ad.to_h)
       @ad.user_id = @user_id
 
-      if @geocode.present?
-        @ad.lat = @geocode['lat']
-        @ad.lon = @geocode['lon']
-      end
-
       if @ad.valid?
         @ad.save
+        @geocode_async.geocode_later(@ad)
       else
         fail!(@ad.errors)
       end

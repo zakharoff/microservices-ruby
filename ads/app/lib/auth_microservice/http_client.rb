@@ -1,10 +1,10 @@
 require 'dry/initializer'
-require_relative 'api'
+require_relative 'http_api'
 
 module AuthService
-  class Client
+  class HttpClient
     extend Dry::Initializer[undefined: false]
-    include Api
+    include HttpApi
 
     option :url, default: proc { 'http://localhost:3010/v1' }
     option :connection, default: proc { build_connection }
